@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import *
 
 def on_button_clicked():
     alert = QMessageBox()
-    alert.setText('Cliqueaste el boton {}'.format())
+    alert.setText('Cliqueaste el boton A')
     alert.exec_()
 
 # Creo la aplicacion
