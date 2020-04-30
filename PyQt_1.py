@@ -49,3 +49,12 @@ print(f"Substracting 22 days: {now.addDays(-22).toString(Qt.ISODate)}")
 print(f"Adding 50 seconds: {now.addSecs(50).toString(Qt.ISODate)}")
 print(f"Adding 3 months: {now.addMonths(3).toString(Qt.ISODate)}")
 print(f"Adding 12 years: {now.addYears(12).toString(Qt.ISODate)}")
+
+# =====================================================================
+# Daylight Saving Time
+print("#==========================================\nDST\n#==========================================")
+print(f"Time Zone: {now.timeZoneAbbreviation()}")
+
+if now.isDaylightTime():
+    print("Daylight Saving Time")
+else: print("No Daylight Saving Time")

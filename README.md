@@ -36,3 +36,7 @@ Datetime variables have methods that allow us to do arithmetic operations on the
 * __Adding Seconds:__ dateTimeVariable.addSecs(n)
 * __Adding Months:__ dateTimeVariable.addMonths(n)
 * __Adding Years:__ dateTimeVariable.addYears(n)
+
+### Daylight Saving Time
+* __Time Zone:__ _dateTimeVariable.timeZoneAbbreviation()_ Displays the time zone of the local time.
+* __DST:__ _dateTimeVariable.isDayLightTime()_ devuelve verdadero o falso dependiendo si el horario cae dentro de DST o no
