@@ -58,3 +58,12 @@ print(f"Time Zone: {now.timeZoneAbbreviation()}")
 if now.isDaylightTime():
     print("Daylight Saving Time")
 else: print("No Daylight Saving Time")
+
+# =====================================================================
+# Unix Epoch
+print("#==========================================\nUNIX Epoch\n#==========================================")
+unix_time = now.toSecsSinceEpoch() 
+print(f"Segundos desde el unix epoch:{unix_time}")
+
+d = QDateTime.fromSecsSinceEpoch(unix_time)
+print(f"Unix time en isodate: {d.toString(Qt.ISODate)}")

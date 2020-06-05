@@ -39,4 +39,28 @@ Datetime variables have methods that allow us to do arithmetic operations on the
 
 ### Daylight Saving Time
 * __Time Zone:__ _dateTimeVariable.timeZoneAbbreviation()_ Displays the time zone of the local time.
-* __DST:__ _dateTimeVariable.isDayLightTime()_ devuelve verdadero o falso dependiendo si el horario cae dentro de DST o no
+* __DST:__ _dateTimeVariable.isDayLightTime()_ devuelve verdadero o falso dependiendo si el horario cae dentro de DST o no.
+
+### Unix Epoch
+ Computers have their epochs too. One of the most popular is the Unix epoch. The Unix epoch is the time 00:00:00 UTC on 1 January 1970 (or 1970- 01-01T00:00:00Z ISO 8601). The date and time in a computer is determined according to the number of seconds or clock ticks that have elapsed since the defined epoch for that computer or platform.
+
+Unix time is the number of seconds elapsed since Unix epoch. 
+>```python
+>unix_time = now.toSecsSinceEpoch() 
+>print(f"Segundos desde el unix epoch:{unix_time}")
+>
+>d = QDateTime.fromSecsSinceEpoch(unix_time)
+>print(f"Unix time en isodate: {d.toString(Qt.ISODate)}")
+>```
+
+## PyQt_2 - Primeros Programas
+>```
+>    import sys
+>    from PyQt5.QtWidgets import QApplication, QWidget
+>```
+Se importan los widgets básicos y el módulo de aplicaciones.
+
+Toda aplicación de PyQt tiene que crear un objeto aplicacion. El parámetro _sys.argv_ permite ingresar argumentos cuando se ejecuta desde la consola.
+>```python
+>app = QApplication(sys.argv)
+>```
